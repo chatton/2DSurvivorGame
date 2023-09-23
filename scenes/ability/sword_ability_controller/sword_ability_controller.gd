@@ -8,9 +8,9 @@ func _ready():
 
 
 func on_timer_timeout():
-	var player: Node2D = get_tree().get_first_node_in_group("player") as Node2D
+	var player := get_tree().get_first_node_in_group("player") as Node2D
 	if player == null:
 		return
-	var sword: Node2D = sword_ability.instantiate() as Node2D
+	var sword := sword_ability.instantiate() as Node2D
 	player.get_parent().add_child(sword)
-	sword.global_position = player.tranglobal_positionsform
+	sword.global_position = player.global_position
